@@ -1,49 +1,13 @@
 # ProyectoVoxmapp
+##Problem Domain
+Voxmapp quiere mejorar su proceso de recepción y manejo de datos. Estos datos son sobre la infraestructura de salud de hospitales en Afganistán y se reciben a través de un cuestionario que se llena una vez al mes por personal de los hospitales a quienes se les notifica por telefono. Es importante resaltar que estos hospitales están en un contexto de inestabilidad y a veces en zonas remotas. Actualmente reciben los datos como un solo documento en el que las diferentes respuestas al cuestionario se separan por comas y otros caracteres. Además, los datos no se reciben con un formato estándar debido a que se llenan desde diferentes regiones y contextos, lo que causa problemas a la hora de segmentar y analizar los datos. No es una solución óptima que alenta el proceso de pasar la información de la encuesta a la base de datos. Este último proceso se termina haciendo a mano. Poder encontrar un método más eficiente de recepción y estandarización de datos sería de su interés. Luego de analizar los datos, Voxmapp sube estos periodicamente a Tableu. El problema aquí se presenta a la hora de querer actualizar las vistas en Tableu, pues se debe de hacer manualmente. Encontrar la forma de automatizar este proceso también sería de su interés. 
 
-## User story
 
-1. Es una empresa digital francesa que asiste a hospitales en la gobernanza de datos;
-   empresa con fines sociales que recolecta y trabaja con data de zonas marginadas
-   
-2. La empresa trabaja con hospitales y centros covid en Afganistán (tiene un proyecto
-   con su gobierno) monitoreándolos para reducir el impacto negativo que la poca
-   infraestructura del país tiene sobre estos.
-   -  a. Afganistán es problemático por su poca infraestructura de servicios de
-         telecomunicación
+##User Story
+El Hospital se ubica en un distrito, de una región, de un país y dichos distrito, región y páis pueden tener más de un hospital en ellos, para ello será necesario un catálogo de países, regiones y distritos para el alta de los hospitales (se propone la relación de N Hospitales en 1 Región). En el hospital se registran los datos estáticos del mismo (ubicación,estado general de la infraestructura, etc). Cada hospital tiene un inventario propio en el que se almacenan diferentes recursos como medicinas, equipamiento médico, etc. (se propone la relación de N Recursos en 1 Inventario en 1 Hospital). El hospital tiene varios doctores (Lorenzo menciona en la entrevista algo que da a entender que algunos doctores pasan por más de un hospital o clínica, tenemos que preguntar bien si se refería a que se mantenían contratados en varios por falta de personal calificado en las regiones o si estaban en un solo trabajo a la vez; asumimos la primera situación hasta que tengamos respuesta) y personal; el personal tiende a permanecer por largos periodos de tiempo en los hospitales por lo que asumimos que ellos solo están contratados en un hospital a la vez (se proponen las relaciones de N Doctores en N Hospitales y N Personal en 1 Hospital). Al registrar el hospital se registran 3 Contactos (proponemos la relación  1 Hospital con 3(N) Contactos) 
 
-3. Se registra (con datos estáticos) a los hospitales con entrevistas hechas por
-   trabajadores de campo y se les da monitoreo (datos dinámicos) a través de un app
-   
-4. Los hospitales registrados contestan una encuesta de monitoreo periódicamente;
-   Voxmapp ha de depurar las encuestas que recibe
-   - a. La encuesta tiene 34 preguntas y se contesta en 4 idiomas
-   - b. Voxmapp recibe la información como un solo documento separado por
-         comas y caracteres; potencialmente mejorable el proceso
-     - i. Hay que estandarizar los teléfonos
-     - ii. Hay que separar provincia y distrito
-     - iii. Hay que subdividir la información en “waves”
-    - c. Muchos cuestionarios son considerados inútiles ya sea porque están mal
-         llenados o incompletos; en este caso se debe de contactar a los hospitales
-       - i. Un problema frecuente (en el contacto y en el manejo de la base de
-               datos) es que hay mucha movilidad entre los doctores.
-        - ii. Se crean un par de tablas una en la que se categorizan los problemas
-               que tuvieron los hospitales en el llenado del cuestionario y otra en la
-               que se enlistan los hospitales a contactar para corregir el problema
-     - d. Los cuestionarios que se llenan correctamente serán procesados
-          manualmente por empleados de Voxmapp
+Se ha dicho que los hospitales tratan casos COVID con frecuencia (proponemos N Casos covid en 1 Hospital). Por lo tanto se debe crear una entidad de Casos Covid. Los casos covid que se tratan asumimos que son seguidos por un solo doctor y tratados por varios miembros del personal (Proponemos 1 Doctor para N Casos Covid y N Personal para N Casos Covid). 
 
-5. La generación de conocimiento a partir de los datos se hace sobre aquellos del
-punto 4.c
-    - a. Los cuestionarios “limpios” se almacenan en sheets de excel y se segmentan
-         a diferentes niveles geográficos
-    - b. Se analizan los datos corriendo códigos en Stata
-    - c. Se crean vistas con la información para poder alimentarlas a Tableu
-    - d. Se actualiza periódicamente el Tableu con nueva información (gap muy
-         grande)
-
-## Problem domain
-
-Voxmapp quiere mejorar su proceso de recepción y manejo de datos. Actualmente reciben los datos como un solo documento en el que las diferentes respuestas al cuestionario se separan por comas y otros caracteres. Además, los datos no se reciben con un formato estándar debido a que se llenan desde diferentes regiones y contextos, lo que causa problemas a la hora de segmentar y analizar los datos. Este último proceso se termina haciendo a mano. Poder encontrar un método más eficiente de recepción y estandarización de datos sería de su interés. Luego de analizar los datos, Voxmapp sube estos periodicamente a Tableu. El problema aquí se presenta a la hora de querer actualizar las vistas en Tableu, pues se debe de hacer manualmente. Encontrar la forma de automatizar este proceso también sería de su interés.
-
+El estado de los hospitales es revisado por Voxmapp periódicamente a través de cuestionarios contestados por un miembro del personal de cada hospital registrado, se actualizan así los datos que se tienen del hospital en cuestión. Cada cuestionario es contestado por un miembro del personal, y esto representa el influjo de los datos de cada hospital y su actualización (proponemos las relaciones 1 Personal contesta N Cuestionarios y 1 Cuestionario crea 1 Actualización).
 ### link de la encuesta
 https://docs.google.com/forms/d/e/1FAIpQLSfoy5UP6hdYlPDM2dWIeAZoOkyjFUE8UmxqyVb1mxXzBwfo0w/viewform
