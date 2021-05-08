@@ -16,3 +16,4 @@ https://docs.google.com/forms/d/e/1FAIpQLSfoy5UP6hdYlPDM2dWIeAZoOkyjFUE8UmxqyVb1
 
 ## Diagrama-ER
 
+![ER-voxmapp](https://user-images.githubusercontent.com/77375206/117518811-ca455b00-af66-11eb-80c6-aef2c71a1666.PNG)
