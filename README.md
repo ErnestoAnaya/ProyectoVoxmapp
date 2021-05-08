@@ -12,3 +12,7 @@ El estado de los hospitales es revisado por Voxmapp periódicamente a través de
 
 ### link de la encuesta
 https://docs.google.com/forms/d/e/1FAIpQLSfoy5UP6hdYlPDM2dWIeAZoOkyjFUE8UmxqyVb1mxXzBwfo0w/viewform
+
+
+## Diagrama-ER
+
