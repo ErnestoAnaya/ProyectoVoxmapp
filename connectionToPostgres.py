@@ -11,7 +11,7 @@ from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import psycopg2
 
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 SERVICE_ACCOUNT_FILE = 'keys.json' #Credenciales de Google Cloud
 
 creds = None
