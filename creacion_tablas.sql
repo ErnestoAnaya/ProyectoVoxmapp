@@ -119,3 +119,11 @@ create table update_(
 );
 create sequence update_id_update_seq start 1 increment 1 ;
 ALTER TABLE update_ ALTER COLUMN update_id SET DEFAULT nextval('update_id_update_seq');
+
+create table personal_voxmapp(
+	first_name varchar(50),
+  	last_name varchar(50),
+  	number_ numeric
+)
+
+
