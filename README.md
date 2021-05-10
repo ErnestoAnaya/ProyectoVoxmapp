@@ -16,12 +16,11 @@ https://docs.google.com/forms/d/e/1FAIpQLSfoy5UP6hdYlPDM2dWIeAZoOkyjFUE8UmxqyVb1
 
 ## Diagrama-ER
 
-![ER-voxmapp](https://user-images.githubusercontent.com/77375206/117518811-ca455b00-af66-11eb-80c6-aef2c71a1666.PNG)
 
 diagrama con db.diagram.io
 https://dbdiagram.io/embed/6098481db29a09603d141499
 
-en dbeaver
+En dbeaver
 
 ![image](https://user-images.githubusercontent.com/77375206/117695615-07d3ff00-b186-11eb-9384-54bb20533661.png)
 
