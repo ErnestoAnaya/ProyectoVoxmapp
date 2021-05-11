@@ -1,6 +1,5 @@
 create table hospital(
-	hospital_id numeric constraint pk_hospital primary key,
-	MOPH_number numeric not null,
+	MOPH_number numeric constraint pk_moph primary key,
   	hospital_name varchar (50) not null,
   	district varchar (50) not null,
   	province varchar (50) not null,
@@ -15,8 +14,6 @@ create table hospital(
   	num_staff numeric not null,
   	type_ char
 );
-create sequence hospital_id_hospital_seq start 1 increment 1 ;
-ALTER TABLE hospital ALTER COLUMN hospital_id SET DEFAULT nextval('hospital_id_hospital_seq');
 
 
 create table personal(
@@ -25,7 +22,7 @@ create table personal(
     last_name varchar(50) not null,
     number_ numeric not null,
     
-    hospital_id numeric REFERENCES hospital (hospital_id) 
+    MOPH_number numeric REFERENCES hospital (MOPH_number) 
 );
 create sequence personal_id_personal_seq start 1 increment 1 ;
 ALTER TABLE personal ALTER COLUMN personal_id SET DEFAULT nextval('personal_id_personal_seq');
@@ -36,7 +33,7 @@ create table update_(
     update_date timestamp not null,
     
     personal_id numeric REFERENCES personal (personal_id),
-    hospital_id numeric REFERENCES hospital (hospital_id)
+    MOPH_number numeric REFERENCES hospital (MOPH_number) 
 );
 create sequence update_id_update_seq start 1 increment 1 ;
 ALTER TABLE update_ ALTER COLUMN update_id SET DEFAULT nextval('update_id_update_seq');
@@ -117,7 +114,5 @@ create table personal_voxmapp(
 	first_name varchar(50),
   	last_name varchar(50),
   	number_ numeric
-)
-
-
+);
 
