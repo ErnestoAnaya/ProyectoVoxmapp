@@ -22,3 +22,4 @@ https://dbdiagram.io/embed/6098481db29a09603d141499
 
 En dbeaver
 
+![ER_voxmapp_dbeaver](https://user-images.githubusercontent.com/77375206/117859721-fdcd0180-b254-11eb-8251-1de45397df5d.PNG)
