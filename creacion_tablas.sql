@@ -31,7 +31,6 @@ ALTER TABLE personal ALTER COLUMN personal_id SET DEFAULT nextval('personal_id_p
 create table update_(
 	update_id numeric constraint pk_update primary key,
     update_date timestamp not null,
-    
     personal_id numeric REFERENCES personal (personal_id),
     MOPH_number numeric REFERENCES hospital (MOPH_number) 
 );
