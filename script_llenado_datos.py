@@ -104,7 +104,6 @@ def infraestructura(lista,upid):
     lista1 = lista[4:8]
     lista1.append(lista[10])
     lista1.append(upid_str)
-    print(lista1)
     a1=tuple(lista1)    
     try:
         connection = psycopg2.connect(user="postgres",
@@ -141,7 +140,6 @@ def reservas(lista,upid):
     upid_str = str(int(upid))
     lista1=lista[12:25]
     lista1.append(upid_str)
-    print(lista1)
     a1=tuple(lista1)     
     try:
         connection = psycopg2.connect(user="postgres",
@@ -215,7 +213,6 @@ def seguimiento(lista,upid):
     upid_str = str(int(upid))
     lista1=lista[32:34]
     lista1.append(upid_str)
-    print(lista1)
     a1=tuple(lista1)     
     
     try:
@@ -249,7 +246,6 @@ def control(lista,upid):
     upid_str = str(int(upid))
     lista1=lista[34:36]
     lista1.append(upid_str)
-    print(lista1)
     a1=tuple(lista1)    
     try:
         connection = psycopg2.connect(user="postgres",
@@ -335,5 +331,3 @@ def main():
         
 
 main()
-
-
