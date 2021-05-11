@@ -66,7 +66,6 @@ CREATE TABLE control_ (
 	control_id numeric constraint pk_control primary key,
 	update_status VARCHAR(50) NOT null,
 	problem VARCHAR(50) NOT null,
-	accion VARCHAR(50) NOT null,
 	update_id numeric REFERENCES update_ (update_id) 
 
 );
