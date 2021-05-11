@@ -284,6 +284,12 @@ def read_all(credentials_, sheet_id, range_to_read):
     values = result.get('values', []) #regresa los valores en una lista de listas
     return values
 
+def write_cell(credentials_,spreadsheet_id,j):
+    service = build('sheets', 'v4', credentials=credentials_)
+    sheet = service.spreadsheets()
+    request = sheet.values().update(spreadsheetId=spreadsheet_id, range="Hoja 2!A1", valueInputOption="USER_ENTERED", body={"values":j})
+    request.execute()
+
 # Función que borra todos los datos de la spreadsheet 
 def clear(credentials_, spreadsheet_id, range_):
     
@@ -312,12 +318,20 @@ def main():
     sheet_range="Hoja 2!A2:AJ"
     
     respuestas = read_all(creds, SPREADSHEET_ID, sheet_range)
+    j=read_all(creds,SPREADSHEET_ID,"Hoja 2!A1")
+    
+    try:
+        
+        j=int(j[0][0])
+        
+    except:
+        j=0
     
     if(respuestas == []):
         print("No hay datos para actualizar")
     else:
         # Llenado de tablas
-        k=0
+        k=j
         sheet_range = "Hoja 2!A"+str(2+k)+":AJ"+str(2+k)
         respuesta = read_all(creds, SPREADSHEET_ID, sheet_range)
         res = ''
@@ -347,11 +361,13 @@ def main():
             k=k+1
             sheet_range = "Hoja 2!A"+str(2+k)+":AJ"+str(2+k)
             respuesta = read_all(creds, SPREADSHEET_ID, sheet_range)
+            l=[[k]]
+            write_cell(creds, SPREADSHEET_ID,l)
             
         if res != '':
             print(res)
         else:
             print("La base de datos fue actualizada correctamente")
-        
+                    
 
 main()
