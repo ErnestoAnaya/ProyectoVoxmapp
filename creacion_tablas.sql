@@ -31,6 +31,7 @@ ALTER TABLE personal ALTER COLUMN personal_id SET DEFAULT nextval('personal_id_p
 create table update_(
 	update_id numeric constraint pk_update primary key,
     update_date timestamp not null,
+    
     personal_id numeric REFERENCES personal (personal_id),
     MOPH_number numeric REFERENCES hospital (MOPH_number) 
 );
@@ -40,7 +41,7 @@ ALTER TABLE update_ ALTER COLUMN update_id SET DEFAULT nextval('update_id_update
 
 CREATE TABLE seguimiento (
 	seguimiento_id numeric constraint pk_seguimiento primary key,
-	regular_tracking boolean NOT null,
+	regular_tracking varchar(10) not null,
 	MOPH_report_frecuency VARCHAR(50) NOT null,
 	update_id numeric REFERENCES update_ (update_id) 
 );
@@ -50,9 +51,9 @@ ALTER TABLE seguimiento ALTER COLUMN seguimiento_id SET DEFAULT nextval('seguimi
 
 CREATE TABLE infraestructura (
 	infraestructura_id numeric constraint pk_infraestructura primary key,
-	screening_implemeted boolean NOT null,
-  	awareness_campaigns boolean NOT null,
-  	test_COVID_capabilities boolean NOT null,
+	screening_implemeted varchar(10) not null,
+  	awareness_campaigns varchar(10) not null,
+  	test_COVID_capabilities varchar(10) not null,
   	test_result_speed int NOT null,
   	resources_received_last_month varchar(50),
 	update_id numeric REFERENCES update_ (update_id) 
@@ -113,46 +114,3 @@ create table personal_voxmapp(
   	last_name varchar(50),
   	number_ numeric
 );
-
-
---BORRADO DE DATOS
-
-
-
-
-
-
--- BORRADO DE OBJETOS
-
--- DROP TABLES
-
-drop table personal_voxmapp;
-drop table seguimiento;
-drop table reservas;
-drop table infraestructura;
-drop table control_;
-drop table casos_covid;
-drop table update_;
-drop table personal;
-drop table hospital;
-
--- DROP SEQUENCES
-
-drop sequence personal_id_personal_seq;
-drop sequence update_id_update_seq;
-drop sequence seguimiento_id_seguimiento_seq;
-drop sequence infraestructura_id_infraestructura_seq;
-drop sequence control_id_control_seq;
-drop sequence casos_covid_id_casos_covid_seq;
-drop sequence reservas_id_reservas_seq;
-
---BORRADO DE DATOS
-
-delete from hospital;
-delete from personal;
-delete from control_;
-delete from update_;
-delete from seguimiento;
-delete from infraestructura;
-delete from casos_covid;
-delete from reservas;
