@@ -1,16 +1,49 @@
-CREATE TABLE cuestionario (
-	cuestionario_id numeric constraint pk_cuestionario primary key
+create table hospital(
+	MOPH_number numeric constraint pk_moph primary key,
+  	hospital_name varchar (50) not null,
+  	district varchar (50) not null,
+  	province varchar (50) not null,
+  	hospital_type varchar (50) not null,
+  	longitude float8 not null,
+  	latitude float8 not null,
+  	altitude float8 not null,
+  	creation_date timestamp not null,
+  	--photo photo not null,
+  	personal_VM_id numeric not null,
+  	num_doctors numeric not null,
+  	num_staff numeric not null,
+  	type_ char
 );
-create sequence cuestionario_id_cuestionario_seq start 1 increment 1 ;
-ALTER TABLE cuestionario ALTER COLUMN cuestionario_id SET DEFAULT nextval('cuestionario_id_cuestionario_seq');
 
+
+create table personal(
+	personal_id numeric constraint pk_personal primary key,
+	first_name varchar(50) not null,
+    last_name varchar(50) not null,
+    number_ numeric not null,
+    
+    MOPH_number numeric REFERENCES hospital (MOPH_number) 
+);
+create sequence personal_id_personal_seq start 1 increment 1 ;
+ALTER TABLE personal ALTER COLUMN personal_id SET DEFAULT nextval('personal_id_personal_seq');
+
+
+create table update_(
+	update_id numeric constraint pk_update primary key,
+    update_date timestamp not null,
+    
+    personal_id numeric REFERENCES personal (personal_id),
+    MOPH_number numeric REFERENCES hospital (MOPH_number) 
+);
+create sequence update_id_update_seq start 1 increment 1 ;
+ALTER TABLE update_ ALTER COLUMN update_id SET DEFAULT nextval('update_id_update_seq');
 
 
 CREATE TABLE seguimiento (
 	seguimiento_id numeric constraint pk_seguimiento primary key,
 	regular_tracking boolean NOT null,
 	MOPH_report_frecuency VARCHAR(50) NOT null,
-	cuestionario_id numeric REFERENCES cuestionario (cuestionario_id) 
+	update_id numeric REFERENCES update_ (update_id) 
 );
 create sequence seguimiento_id_seguimiento_seq start 1 increment 1 ;
 ALTER TABLE seguimiento ALTER COLUMN seguimiento_id SET DEFAULT nextval('seguimiento_id_seguimiento_seq');
@@ -23,7 +56,7 @@ CREATE TABLE infraestructura (
   	test_COVID_capabilities boolean NOT null,
   	test_result_speed int NOT null,
   	resources_received_last_month varchar(50),
-  	cuestionario_id numeric REFERENCES cuestionario (cuestionario_id) 
+	update_id numeric REFERENCES update_ (update_id) 
 );
 create sequence infraestructura_id_infraestructura_seq start 1 increment 1 ;
 ALTER TABLE infraestructura ALTER COLUMN infraestructura_id SET DEFAULT nextval('infraestructura_id_infraestructura_seq');
@@ -33,8 +66,7 @@ CREATE TABLE control_ (
 	control_id numeric constraint pk_control primary key,
 	update_status VARCHAR(50) NOT null,
 	problem VARCHAR(50) NOT null,
-	accion VARCHAR(50) NOT null,
- 	cuestionario_id numeric REFERENCES cuestionario (cuestionario_id) 
+	update_id numeric REFERENCES update_ (update_id) 
 
 );
 create sequence control_id_control_seq start 1 increment 1 ;
@@ -49,7 +81,7 @@ CREATE TABLE casos_covid (
 	deaths_last_month numeric NOT null,
 	non_COVID_deaths numeric NOT null,
 	recovered_patients numeric NOT null,
- 	cuestionario_id numeric REFERENCES cuestionario (cuestionario_id) 
+	update_id numeric REFERENCES update_ (update_id) 
 
 );
 create sequence casos_covid_id_casos_covid_seq start 1 increment 1 ;
@@ -71,57 +103,56 @@ CREATE TABLE reservas (
 	test_kits VARCHAR(50) NOT null,
 	num_test_kits numeric NOT null,
 	respiratory_ventilator_machines numeric NOT null,
-	cuestionario_id numeric REFERENCES cuestionario (cuestionario_id) 
+	update_id numeric REFERENCES update_ (update_id) 
 );
 create sequence reservas_id_reservas_seq start 1 increment 1 ;
 ALTER TABLE reservas ALTER COLUMN reservas_id SET DEFAULT nextval('reservas_id_reservas_seq');
 
-create table hospital(
-	hospital_id numeric constraint pk_hospital primary key,
-	MOPH_number numeric not null,
-  	hospital_name varchar (50) not null,
-  	district varchar (50) not null,
-  	province varchar (50) not null,
-  	hospital_type varchar (50) not null,
-  	longitude float8 not null,
-  	latitude float8 not null,
-  	altitude float8 not null,
-  	creation_date timestamp not null,
-  	--photo photo not null,
-  	personal_VM_id numeric not null,
-  	num_doctors numeric not null,
-  	num_staff numeric not null,
-  	type_ char
-);
-create sequence hospital_id_hospital_seq start 1 increment 1 ;
-ALTER TABLE hospital ALTER COLUMN hospital_id SET DEFAULT nextval('hospital_id_hospital_seq');
-
-
-create table personal(
-	personal_id numeric constraint pk_personal primary key,
-	first_name varchar(50) not null,
-    last_name varchar(50) not null,
-    number_ numeric not null,
-    
-    hospital_id numeric REFERENCES hospital (hospital_id) 
-);
-create sequence personal_id_personal_seq start 1 increment 1 ;
-ALTER TABLE personal ALTER COLUMN personal_id SET DEFAULT nextval('personal_id_personal_seq');
-
-
-create table update_(
-	update_id int constraint pk_update primary key,
-    update_date timestamp not null,
-    
-    personal_id numeric REFERENCES personal (personal_id),
-    hospital_id numeric REFERENCES hospital (hospital_id),
-    cuestionario_id numeric REFERENCES cuestionario (cuestionario_id) 
-);
-create sequence update_id_update_seq start 1 increment 1 ;
-ALTER TABLE update_ ALTER COLUMN update_id SET DEFAULT nextval('update_id_update_seq');
 
 create table personal_voxmapp(
 	first_name varchar(50),
   	last_name varchar(50),
   	number_ numeric
-)
+);
+
+--BORRADO DE DATOS
+
+
+
+
+
+
+-- BORRADO DE OBJETOS
+
+-- DROP TABLES
+
+drop table personal_voxmapp;
+drop table seguimiento;
+drop table reservas;
+drop table infraestructura;
+drop table control_;
+drop table casos_covid;
+drop table update_;
+drop table personal;
+drop table hospital;
+
+-- DROP SEQUENCES
+
+drop sequence personal_id_personal_seq;
+drop sequence update_id_update_seq;
+drop sequence seguimiento_id_seguimiento_seq;
+drop sequence infraestructura_id_infraestructura_seq;
+drop sequence control_id_control_seq;
+drop sequence casos_covid_id_casos_covid_seq;
+drop sequence reservas_id_reservas_seq;
+
+--BORRADO DE DATOS
+
+delete from hospital;
+delete from personal;
+delete from control_;
+delete from update_;
+delete from seguimiento;
+delete from infraestructura;
+delete from casos_covid;
+delete from reservas;
