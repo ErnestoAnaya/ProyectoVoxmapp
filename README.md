@@ -22,5 +22,3 @@ https://dbdiagram.io/embed/6098481db29a09603d141499
 
 En dbeaver
 
-![image](https://user-images.githubusercontent.com/77375206/117695615-07d3ff00-b186-11eb-9384-54bb20533661.png)
-
