@@ -75,9 +75,9 @@ ALTER TABLE control_ ALTER COLUMN control_id SET DEFAULT nextval('control_id_con
 
 CREATE TABLE casos_covid (
 	casos_covid_id numeric constraint pk_casos_covid primary key,
-	PHC_reffered_cases numeric NOT null,
 	positive_tests_last_month numeric NOT null,
 	intensive_care numeric NOT null,
+	PHC_reffered_cases numeric NOT null,
 	deaths_last_month numeric NOT null,
 	non_COVID_deaths numeric NOT null,
 	recovered_patients numeric NOT null,
@@ -114,6 +114,7 @@ create table personal_voxmapp(
   	last_name varchar(50),
   	number_ numeric
 );
+
 
 --BORRADO DE DATOS
 
