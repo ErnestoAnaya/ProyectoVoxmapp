@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 10 20:13:34 2021
 
-@author: javi2
-"""
-
-from __future__ import print_function
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import psycopg2
@@ -88,7 +81,7 @@ def update(lista):
         return update_date
 
     except (Exception, psycopg2.Error) as error:
-        print("Failed to insert record into update_", error)
+        return "Error"
     
     finally:
         # closing database connection.
@@ -115,17 +108,18 @@ def infraestructura(lista,upid):
     
         postgres_insert_query = """ INSERT INTO infraestructura (screening_implemeted,awareness_campaigns,
         test_covid_capabilities,test_result_speed,resources_received_last_month,
-        update_id) values (CAST( %s AS BOOLEAN),CAST( %s AS BOOLEAN),CAST( %s AS BOOLEAN),CAST( %s AS NUMERIC),%s,CAST( %s AS NUMERIC))"""
+        update_id) values (%s,%s,%s,CAST( %s AS NUMERIC),%s,CAST( %s AS NUMERIC))"""
         
         record_to_insert = a1
         cursor.execute(postgres_insert_query, record_to_insert)
     
         connection.commit()
         count = cursor.rowcount
+        return ''
         #print(count, "Record inserted successfully into mobile table")
     
     except (Exception, psycopg2.Error) as error:
-        print("Failed to insert record into infraestructura", error)
+        return ("Failed to insert record into infraestructura", error)
     
     finally:
         # closing database connection.
@@ -160,10 +154,11 @@ def reservas(lista,upid):
     
         connection.commit()
         count = cursor.rowcount
+        return ''
         #print(count, "Record inserted successfully into mobile table")
     
     except (Exception, psycopg2.Error) as error:
-        print("Failed to insert record into reservas", error)
+        return ("Failed to insert record into reservas", error)
     
     finally:
         # closing database connection.
@@ -197,10 +192,11 @@ def casoscovid(lista,upid):
     
         connection.commit()
         count = cursor.rowcount
+        return ''
         #print(count, "Record inserted successfully into mobile table")
     
     except (Exception, psycopg2.Error) as error:
-        print("Failed to insert record into casos_covid", error)
+        return ("Failed to insert record into casos_covid", error)
     
     finally:
         # closing database connection.
@@ -223,17 +219,18 @@ def seguimiento(lista,upid):
                                       database="proyectoFinal")
         cursor = connection.cursor()
     
-        postgres_insert_query = """ INSERT INTO seguimiento (regular_tracking,moph_report_frecuency,update_id) values (CAST( %s AS BOOLEAN),%s,CAST(%s AS NUMERIC))"""
+        postgres_insert_query = """ INSERT INTO seguimiento (regular_tracking,moph_report_frecuency,update_id) values (%s,%s,CAST(%s AS NUMERIC))"""
         
         record_to_insert = a1
         cursor.execute(postgres_insert_query, record_to_insert)
     
         connection.commit()
         count = cursor.rowcount
+        return ''
         #print(count, "Record inserted successfully into mobile table")
     
     except (Exception, psycopg2.Error) as error:
-        print("Failed to insert record into seguimiento", error)
+        return ("Failed to insert record into seguimiento", error)
     
     finally:
         # closing database connection.
@@ -262,10 +259,11 @@ def control(lista,upid):
     
         connection.commit()
         count = cursor.rowcount
+        return ''
         #print(count, "Record inserted successfully into mobile table")
     
     except (Exception, psycopg2.Error) as error:
-        print("Failed to insert record into control_", error)
+        return ("Failed to insert record into control_", error)
     
     finally:
         # closing database connection.
@@ -310,24 +308,50 @@ def main():
     SPREADSHEET_ID = '1NrnirdVqhgThFQqfcyC8YquR7ciKqK_j6qingCOUF14'
     
     # Rango a leer/escribir en notación A1
-    sheet_range="Respuestas de formulario 1!A2:AJ" 
-    
+    #sheet_range="Respuestas de formulario 1!A2:AJ" 
+    sheet_range="Hoja 2!A2:AJ"
     
     respuestas = read_all(creds, SPREADSHEET_ID, sheet_range)
     
-    # Llenado de tablas
-    for respuesta in respuestas:
-        
-        up_date = update(respuesta)
-        upid = get_upid(up_date)
-        
-        infraestructura(respuesta,upid)
-        reservas(respuesta, upid)
-        casoscovid(respuesta, upid)
-        control(respuesta, upid)
-        seguimiento(respuesta, upid)
-        
-    #clear(creds, SPREADSHEET_ID, sheet_range)
+    if(respuestas == []):
+        print("No hay datos para actualizar")
+    else:
+        # Llenado de tablas
+        k=0
+        sheet_range = "Hoja 2!A"+str(2+k)+":AJ"+str(2+k)
+        respuesta = read_all(creds, SPREADSHEET_ID, sheet_range)
+        res = ''
+        while respuesta != []:
+            
+            for i in range(0,len(respuesta[0])):
+                if respuesta[0][i]=='':
+                    respuesta[0][i]="-2"
+                    
+            sb = ''
+            
+            up_date = update(respuesta[0])
+            if(up_date == 'Error'):
+                sb = sb + str(up_date)
+            else:
+                upid = get_upid(up_date)
+                sb = sb + str(infraestructura(respuesta[0],upid))
+                sb = sb + str(reservas(respuesta[0], upid))
+                sb = sb + str(casoscovid(respuesta[0], upid))
+                sb = sb + str(control(respuesta[0], upid))
+                sb = sb + str(seguimiento(respuesta[0], upid))
+            if(sb!=''):
+                res = "Error al actualizar. Por favor, revisar los registros del formulario"
+            else:
+                clear(creds, SPREADSHEET_ID, sheet_range)
+            
+            k=k+1
+            sheet_range = "Hoja 2!A"+str(2+k)+":AJ"+str(2+k)
+            respuesta = read_all(creds, SPREADSHEET_ID, sheet_range)
+            
+        if res != '':
+            print(res)
+        else:
+            print("La base de datos fue actualizada correctamente")
         
 
 main()
