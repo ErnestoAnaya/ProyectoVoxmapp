@@ -1,0 +1,114 @@
+moph_number,hospital_name,district,province,hospital_type,longitude,latitude,altitude,creation_date,personal_vm_id,num_doctors,num_staff
+1,Afghan Hospital,Kabul,Kabul_prov,Private,139,177,4,25/05/2021 15:02:22,2,7,9
+2,Amiri Medical Complex,Kabul,Kabul_prov,Private,127,159,7,25/05/2021 15:02:22,1,10,6
+3,Sana Medical Complex,Kabul,Kabul_prov,Private,173,118,2,25/05/2021 15:02:22,1,8,10
+4,Ariana Medical Complex,Kabul,Kabul_prov,Private,117,102,6,25/05/2021 15:02:22,4,6,9
+5,Mussa Wardak Hospital,Kabul,Kabul_prov,Private,110,103,9,25/05/2021 15:02:22,1,7,9
+6,Global Medical Complex,Kabul,Kabul_prov,Private,132,180,4,25/05/2021 15:02:22,5,9,7
+7,Ali Abad Hospital,Kabul,Kabul_prov,Afghan government,186,126,9,25/05/2021 15:02:22,2,10,9
+8,Amad Shah Baba Hospital,Kabul,Kabul_prov,Médecins Sans Frontières,113,162,5,25/05/2021 15:02:22,5,5,6
+9,American Medical Center,Kabul,Kabul_prov,Private,133,160,7,25/05/2021 15:02:22,5,7,8
+10,Andkhoy Hospital,Andkhoy,Andkhoy_prov,Afghan government,123,122,7,25/05/2021 15:02:22,3,7,6
+11,Aqcha Hospital,Aqcha,Aqcha_prov,Afghan government,118,154,5,25/05/2021 15:02:22,5,7,7
+12,Asad Abad Hospital,Asadabad,Asadabad_prov,Afghan government,106,188,3,25/05/2021 15:02:22,3,7,8
+13,Ata Turk Hospital,Kabul,Kabul_prov,Afghan government,164,123,2,25/05/2021 15:02:22,5,6,9
+14,Baghlan District Hospital,Baghlan,Baghlan_prov,Afghan government,135,160,10,25/05/2021 15:02:22,5,10,7
+15,Baharak Hospital,Baharak,Baharak_prov,Afghan government,193,163,7,25/05/2021 15:02:22,3,9,10
+16,Balkh Hospital,Balkh,Balkh_prov,Afghan government,177,179,4,25/05/2021 15:02:22,5,6,10
+17,Bamyan Central Hospital,Bamyan,Bamyan_prov,Afghan government,195,109,5,25/05/2021 15:02:22,5,9,7
+18,Baraki Rojan Hospital,Baraki Barak,Baraki Barak_prov,Afghan government,200,199,5,25/05/2021 15:02:22,5,5,5
+19,Bost Hospital,Lashkargah,Lashkargah_prov,Médecins Sans Frontières,172,180,1,25/05/2021 15:02:22,2,7,9
+20,Chaki Wardak Hospital,Chaki Wardak,Chaki Wardak_prov,Afghan government,131,185,1,25/05/2021 15:02:22,5,10,10
+21,Changaram Hospital,Panjshir,Panjshir_prov,Afghan government,169,192,1,25/05/2021 15:02:22,3,6,8
+22,CURE International Hospital,Kabul,Kabul_prov,Private,141,109,5,25/05/2021 15:02:22,1,9,6
+23,Daoud Khan Military Hospital,Kabul,Kabul_prov,Afghan National Army,109,126,7,25/05/2021 15:02:22,2,6,5
+24,Dasht-e-Barchi Hospital,Kabul,Kabul_prov,Médecins Sans Frontières,158,105,4,25/05/2021 15:02:22,2,10,5
+25,Dasht-i-Qala Hospital,Yangi Qala,Yangi Qala_prov,Afghan government,140,184,4,25/05/2021 15:02:22,2,7,7
+26,DK - German Medical Diagnostic Center,Kabul,Kabul_prov,Private,104,187,6,25/05/2021 15:02:22,1,9,5
+27,Egyptian Field Hospital,Bagram,Bagram_prov,Egyptian government,171,185,6,25/05/2021 15:02:22,1,10,7
+28,Emergency Surgical Center for War Victims,Kabul,Kabul_prov,Afghan government,174,192,5,25/05/2021 15:02:22,5,9,8
+29,Faizabad Hospital,Fayzabad,Fayzabad_prov,Afghan government,131,199,1,25/05/2021 15:02:22,5,6,9
+30,Farah City Hospital,Farah,Farah_prov,NA,168,177,4,25/05/2021 15:02:22,4,5,8
+31,Farah Provincial Hospital,Farah,Farah_prov,Afghan government,189,110,5,25/05/2021 15:02:22,2,10,10
+32,Farkhar Hospital,Farkhar,Farkhar_prov,Afghan government,135,199,9,25/05/2021 15:02:22,3,10,10
+33,Faryab Central Hospital,Maymana,Maymana_prov,Afghan government,160,199,2,25/05/2021 15:02:22,2,6,7
+34,Fatumatu Zahra,Jalalabad,Jalalabad_prov,Aghan government,136,149,6,25/05/2021 15:02:22,4,10,6
+35,French Medical Institute for Children,Kabul,Kabul_prov,Fra/Afg government,106,134,4,25/05/2021 15:02:22,4,5,10
+36,Gardez Civil Hospital,Gardez,Gardez_prov,Afghan government,120,149,7,25/05/2021 15:02:22,5,10,10
+37,General Hospital of Public Health,Jalalabad,Jalalabad_prov,Afghan government,173,147,10,25/05/2021 15:02:22,4,10,8
+38,Ghazni Civil Provincial Hospital,Ghazni,Ghazni_prov,Afghan government,108,117,3,25/05/2021 15:02:22,5,8,10
+39,Ghor Provincial Hospital,Chaghcharan,Chaghcharan_prov,Afghan government,179,116,8,25/05/2021 15:02:22,5,8,6
+40,Guzara District Hospital,Guzara,Guzara_prov,Afghan government,138,153,5,25/05/2021 15:02:22,5,5,10
+41,Heathe N. Craig Joint Theater Hospital,Bagram,Bagram_prov,United States Army,119,113,10,25/05/2021 15:02:22,1,8,5
+42,Aria Apollo Hospital,Herat,Herat_prov,Private,153,127,8,25/05/2021 15:02:22,1,9,9
+43,Herat Regional Hospital,Herat,Herat_prov,Afghan government,131,116,4,25/05/2021 15:02:22,1,7,6
+44,Loqman Hakim Complex Hospital,Herat,Herat_prov,Private,139,135,6,25/05/2021 15:02:22,5,8,9
+45,Mehraban Hospital,Herat,Herat_prov,Private,192,152,10,25/05/2021 15:02:22,2,8,9
+46,Raziqi Hospital,Herat,Herat_prov,Private,127,180,7,25/05/2021 15:02:22,2,9,7
+47,Sehat Hospital,Herat,Herat_prov,Private,143,105,6,25/05/2021 15:02:22,4,10,10
+48,IbnSina Emergency Hospital,Kabul,Kabul_prov,Afghan government,145,162,10,25/05/2021 15:02:22,1,7,10
+49,Indira Gandhi Children's Hospital,Kabul,Kabul_prov,NA,125,138,2,25/05/2021 15:02:22,5,8,8
+50,Inferally Hospital,Day Mirdad,Day Mirdad_prov,Afghan government,146,153,10,25/05/2021 15:02:22,5,8,5
+51,Jaghori Hospital,Jaghori,Jaghori_prov,Afghan government,138,151,5,25/05/2021 15:02:22,3,9,8
+52,Jamhuriat Hospital,Kabul,Kabul_prov,Aga Khan Development Network,176,179,10,25/05/2021 15:02:22,5,5,8
+53,Jawzjan Provincial Hospital,Jowzjan,Jowzjan_prov,Afghan government,124,120,7,25/05/2021 15:02:22,4,9,7
+54,Jinnah Hospital,Kabul,Kabul_prov,Pakistani government,186,191,10,25/05/2021 15:02:22,3,10,9
+55,Kabul Infectious Diseases Hospital,Kabul,Kabul_prov,Afghan government,157,147,1,25/05/2021 15:02:22,2,7,7
+56,Kabul Mental Health Hospital,Kabul,Kabul_prov,Afghan government,170,128,5,25/05/2021 15:02:22,3,9,10
+57,Karte 3 Surgical Hospital,Kabul,Kabul_prov,Afghan government,145,118,9,25/05/2021 15:02:22,5,8,6
+58,Kaisha Health Care Kabul,Kabul,Kabul_prov,Private,189,160,9,25/05/2021 15:02:22,5,5,5
+59,Kapisa Provincial Hospital,Mahmud Raqi,Mahmud Raqi_prov,Afghan government,162,110,6,25/05/2021 15:02:22,2,8,8
+60,Khair Khana Hospital,Kabul,Kabul_prov,Afghan government,170,148,2,25/05/2021 15:02:22,5,5,8
+61,Khost Hospital,Khost (Matun),Khost (Matun)_prov,Afghan government,144,169,4,25/05/2021 15:02:22,1,10,6
+62,Khulm District Hospital,Khulm,Khulm_prov,Afghan government,148,156,6,25/05/2021 15:02:22,1,10,9
+63,KIA ISAF Role 3 Hospital,Kabul,Kabul_prov,NATO,190,169,1,25/05/2021 15:02:22,5,7,10
+64,Kod Barq Hospital,Dihdadi,Dihdadi_prov,Afghan government,176,184,8,25/05/2021 15:02:22,2,10,7
+65,Kunduz Regional Hospital,Kunduz,Kunduz_prov,Afghan government,122,199,4,25/05/2021 15:02:22,2,10,8
+66,Lashkar Gah General Hospital,Lashkargah,Lashkargah_prov,Afghan government,100,129,6,25/05/2021 15:02:22,5,10,8
+67,Maidan Wardak Hospital,Maidan Shar,Maidan Shar_prov,Afghan government,195,167,9,25/05/2021 15:02:22,5,6,6
+68,Maiwand Hospital,Kabul,Kabul_prov,Afghan government,145,119,8,25/05/2021 15:02:22,1,7,7
+69,Malalay Maternity Hospital,Kabul,Kabul_prov,Afghan government,195,102,7,25/05/2021 15:02:22,3,10,5
+70,Maulawi Abdul Tahir Hospital,Andar,Andar_prov,Afghan government,200,112,8,25/05/2021 15:02:22,2,7,9
+71,Aftaab International Hospital,Mazar-i-Sharif,Mazar-i-Sharif_prov,Private,127,197,8,25/05/2021 15:02:22,3,10,10
+72,Mawlana Hospital,Mazar-i-Sharif,Mazar-i-Sharif_prov,Private,158,146,4,25/05/2021 15:02:22,2,9,10
+73,Mazar-i-Sharif General Civil Hospital,Mazar-i-Sharif,Mazar-i-Sharif_prov,Afghan government,116,163,5,25/05/2021 15:02:22,1,6,10
+74,Rahnavard Hospital,Mazar-i-Sharif,Mazar-i-Sharif_prov,Private,192,116,9,25/05/2021 15:02:22,1,5,5
+75,Medical Hospital of Nangarhar,Jalalabad,Jalalabad_prov,Afghan government,104,166,8,25/05/2021 15:02:22,2,6,7
+76,Mehtar Laam Baba Regional Hospital,Mihtarlam,Mihtarlam_prov,Afghan government,142,106,6,25/05/2021 15:02:22,1,8,8
+77,Ministry of Mines Hospital,Puli Khumri,Puli Khumri_prov,Afghan Ministry of Mines and Industry,155,160,1,25/05/2021 15:02:22,1,6,10
+78,Ayno Mina Hospital,Kandahar,Kandahar_prov,Afghan government,162,197,5,25/05/2021 15:02:22,3,9,10
+79,Al Farhad Hospital,Kandahar,Kandahar_prov,Private,170,126,4,25/05/2021 15:02:22,2,8,7
+80,Ayoubi Hospital,Kandahar,Kandahar_prov,Private,103,196,7,25/05/2021 15:02:22,2,7,9
+81,Mirwais Hospital,Kandahar,Kandahar_prov,Afghan governmentRed Cross,148,199,6,25/05/2021 15:02:22,4,10,6
+82,Mohmand Hospital,Kandahar,Kandahar_prov,Private,176,139,5,25/05/2021 15:02:22,1,9,5
+83,Sial Curative Hospital,Kandahar,Kandahar_prov,Private,200,178,6,25/05/2021 15:02:22,1,6,7
+84,Sidal Hospital,Kandahar,Kandahar_prov,Private,193,115,1,25/05/2021 15:02:22,4,7,7
+85,Nasagee Hospital,Puli Khumri,Puli Khumri_prov,Afghan government,195,183,10,25/05/2021 15:02:22,1,10,6
+86,Nayab Aminullah Khan Logar Hospital,Puli Alam,Puli Alam_prov,Afghan government,101,130,6,25/05/2021 15:02:22,2,6,6
+87,Nesaji Gulbahar Hospital,Kohistan,Kohistan_prov,Afghan government,144,178,7,25/05/2021 15:02:22,3,9,8
+88,Nijrab District Hospital,Nijrab,Nijrab_prov,Afghan government,199,156,4,25/05/2021 15:02:22,4,9,7
+89,Nimroz Hospital,Zaranj,Zaranj_prov,Afghan government,147,148,9,25/05/2021 15:02:22,1,5,7
+90,Noor Hospital (1),Kabul,Kabul_prov,Afghan government,152,137,2,25/05/2021 15:02:22,3,6,5
+91,Noor Hospital (2),Kabul,Kabul_prov,Afghan government,173,104,7,25/05/2021 15:02:22,1,8,7
+92,Panjab Eye Hospital,Panjab,Panjab_prov,Afghan government,134,159,2,25/05/2021 15:02:22,4,5,5
+93,Panjshir Emergency Surgical Centre,Panjshir,Panjshir_prov,Afghan government,136,195,6,25/05/2021 15:02:22,5,9,7
+94,Parwan Provincial Hospital,Chaharikar,Chaharikar_prov,Afghan government,157,134,9,25/05/2021 15:02:22,1,9,8
+95,Police Hospital,Kabul,Kabul_prov,Afghan government,190,120,2,25/05/2021 15:02:22,4,6,9
+96,Pul-i-Khumri Civil Hospital,Puli Khumri,Puli Khumri_prov,Afghan government,153,128,4,25/05/2021 15:02:22,2,7,5
+97,Qala-i-Naw District Hospital,Qala i Naw,Qala i Naw_prov,Afghan government,119,129,7,25/05/2021 15:02:22,1,7,6
+98,Qalat Hospital,Qalat,Qalat_prov,Afghan government,120,117,2,25/05/2021 15:02:22,1,6,8
+99,Quiat Al Khair Hospital,Saydabad,Saydabad_prov,Afghan government,131,123,4,25/05/2021 15:02:22,4,9,7
+100,Rabia-i-Balkhi Hospital,Kabul,Kabul_prov,Afghan government,140,133,9,25/05/2021 15:02:22,4,10,10
+101,Rukha Hospital,Panjshir,Panjshir_prov,Afghan government,174,171,10,25/05/2021 15:02:22,3,9,9
+102,Sadre Abn Seena Hospital,Kabul,Kabul_prov,Afghan government,139,100,5,25/05/2021 15:02:22,2,8,5
+103,Sar-i-Pul Provincial Hospital,Sar-e Pol,Sar-e Pol_prov,Afghan government,116,169,5,25/05/2021 15:02:22,1,10,6
+104,Sharan Hospital,Sharana,Sharana_prov,Afghan government,166,179,10,25/05/2021 15:02:22,5,10,10
+105,Shenwar Ghani Khail Hospital,Shinwar,Shinwar_prov,Afghan government,191,143,7,25/05/2021 15:02:22,4,7,5
+106,Shino Zada Hospital,Kabul,Kabul_prov,Private,158,160,8,25/05/2021 15:02:22,4,8,6
+107,SAMI Hospitals int,Kabul,Kabul_prov,Private,188,194,3,25/05/2021 15:02:22,3,6,9
+108,Stomatology Hospital,Kabul,Kabul_prov,Afghan government,110,157,1,25/05/2021 15:02:22,4,8,6
+109,Taloqan Central Hospital,Taluqan,Taluqan_prov,Afghan government,178,138,6,25/05/2021 15:02:22,2,7,6
+110,Wamy Hospital,Tsamkani,Tsamkani_prov,Afghan government,177,113,9,25/05/2021 15:02:22,5,7,6
+111,Wazir Akbar Khan Hospital,Kabul,Kabul_prov,Afghan government,145,183,9,25/05/2021 15:02:22,4,5,9
+112,Yakawlang Hospital,Yakawlang,Yakawlang_prov,Afghan government,139,115,5,25/05/2021 15:02:22,4,9,8
+113,ZNN Medical Lab,Kabul,Kabul_prov,Private,188,100,7,25/05/2021 15:02:22,3,6,6
