@@ -328,7 +328,7 @@ def main():
         j=0
     
     if(respuestas == []):
-        print("No hay datos para actualizar")
+        print("There is no data to update")
     else:
         # Llenado de tablas
         k=j
@@ -354,7 +354,7 @@ def main():
                 sb = sb + str(control(respuesta[0], upid))
                 sb = sb + str(seguimiento(respuesta[0], upid))
             if(sb!=''):
-                res = "Error al actualizar. Por favor, revisar los registros del formulario"
+                res = "Update error. Please, check the form records"
             else:
                 clear(creds, SPREADSHEET_ID, sheet_range)
             
@@ -367,7 +367,7 @@ def main():
         if res != '':
             print(res)
         else:
-            print("La base de datos fue actualizada correctamente")
-                    
-
-main()
+            print("Data base was succesfully updated")
+            
+if __name__ == "__main__":
+    main()
