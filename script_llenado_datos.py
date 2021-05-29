@@ -2,6 +2,7 @@
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import psycopg2
+import sys
 
 def timestamp_format(timestamp_from_spreadsheet):
     hora = timestamp_from_spreadsheet.split(' ')[1]
@@ -305,7 +306,7 @@ def main():
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
     
     # Credenciales de Google Cloud
-    SERVICE_ACCOUNT_FILE = "C:\\Users\\javi2\\Documents\\Proyecto Bases de Datos\\keys.json" 
+    SERVICE_ACCOUNT_FILE = "C:\\Users\\javi2\\Documents\\ProyectoBasesdeDatos\\keys.json" 
     creds = None
     creds = service_account.Credentials.from_service_account_file(
             SERVICE_ACCOUNT_FILE, scopes=SCOPES)
@@ -368,6 +369,7 @@ def main():
             print(res)
         else:
             print("Data base was succesfully updated")
+            
             
 if __name__ == "__main__":
     main()
