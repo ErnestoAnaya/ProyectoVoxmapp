@@ -1,0 +1,39 @@
+﻿<Window x:Class="ProyectoFinalBaseDatos.Insertar_Hospital"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinalBaseDatos"
+        mc:Ignorable="d"
+        Title="Insertar_Hospital" Height="624" Width="466">
+    <Grid Height="671" VerticalAlignment="Top">
+        <Label x:Name="moph" Content="Moph Number" HorizontalAlignment="Left" Margin="61,135,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="moph_tb" HorizontalAlignment="Left" Height="23" Margin="61,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="61,189,0,0" VerticalAlignment="Top"/>
+        <Label Content="District" HorizontalAlignment="Left" Margin="61,243,0,0" VerticalAlignment="Top"/>
+        <Label Content="Province" HorizontalAlignment="Left" Margin="61,297,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="61,351,0,0" VerticalAlignment="Top"/>
+        <Label Content="Longitude" HorizontalAlignment="Left" Margin="61,405,0,0" VerticalAlignment="Top"/>
+        <Label Content="Latitude" HorizontalAlignment="Left" Margin="63,459,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="name_tb" HorizontalAlignment="Left" Height="23" Margin="61,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="district_tb" HorizontalAlignment="Left" Height="23" Margin="61,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="province_tb" HorizontalAlignment="Left" Height="23" Margin="61,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="type_tb" HorizontalAlignment="Left" Height="23" Margin="61,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="longitude_tb" HorizontalAlignment="Left" Height="23" Margin="61,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="latitude_tb" HorizontalAlignment="Left" Height="23" Margin="61,485,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Altitude" HorizontalAlignment="Left" Margin="63,513,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="264,189,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number of doctors" HorizontalAlignment="Left" Margin="264,243,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="altitude_tb" HorizontalAlignment="Left" Height="23" Margin="63,539,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="label_tb" HorizontalAlignment="Left" Height="23" Margin="264,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="num_doctors_tb" HorizontalAlignment="Left" Height="23" Margin="264,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Number of staff" HorizontalAlignment="Left" Margin="264,297,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="num_staff_tb" HorizontalAlignment="Left" Height="23" Margin="264,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Enter your VoxMapp ID" HorizontalAlignment="Left" Margin="61,33,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="personal_vm_id_tb" HorizontalAlignment="Left" Height="23" Margin="63,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Enter the new hospital's data:" HorizontalAlignment="Left" Margin="61,104,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="insert_b" Content="Insert" HorizontalAlignment="Left" Margin="284,390,0,0" VerticalAlignment="Top" Width="74" Click="insert_b_Click"/>
+        <Button Content="&lt;" HorizontalAlignment="Left" Margin="361,547,0,0" VerticalAlignment="Top" Width="23" Click="Button_Click"/>
+
+    </Grid>
+</Window>

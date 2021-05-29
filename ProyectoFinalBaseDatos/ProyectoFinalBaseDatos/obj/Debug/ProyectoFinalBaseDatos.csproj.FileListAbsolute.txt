@@ -1,0 +1,19 @@
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos.csprojAssemblyReference.cache
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\MainWindow.g.cs
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\App.g.cs
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos_MarkupCompile.cache
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos_MarkupCompile.lref
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\bin\Debug\ProyectoFinalBaseDatos.exe.config
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\bin\Debug\ProyectoFinalBaseDatos.exe
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\bin\Debug\ProyectoFinalBaseDatos.pdb
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\MainWindow.baml
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos.g.resources
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos.Properties.Resources.resources
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos.csproj.GenerateResource.cache
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos.csproj.CoreCompileInputs.cache
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos.exe
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\ProyectoFinalBaseDatos.pdb
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\Admin.g.cs
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\Admin.baml
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\Insertar Hospital.g.cs
+C:\Users\javi2\source\repos\ProyectoFinalBaseDatos\ProyectoFinalBaseDatos\obj\Debug\Insertar Hospital.baml
